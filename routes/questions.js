@@ -3,15 +3,8 @@ const router = express.Router();
 const Question = require("../models/question");
 
 // All Authors Route
-router.get("/", async (req, res) => {
-    try{
-const questions=await questions.find({})
-res.render('questions/index',{ questions: questions})
-
-    }catch{
-        res.redirect('/')
-    }
-  
+router.get("/", (req, res) => {
+  res.render("questions/index");
 });
 // new question route
 router.get("/new", (req, res) => {
