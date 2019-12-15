@@ -1,13 +1,12 @@
 if(process.env.NODE_ENV !== 'production'){
     require('dotenv').config()
 }
-
-
 const express = require("express");
 const app = express();
 const exphbs  = require('express-handlebars');
 const indexRouter=require('./routes/index')
 const questionsRouter=require('./routes/questions')
+const quizzRouter=require('./routes/quizz')
 const mongoose=require('mongoose')
 const bodyParser= require('body-parser')
 
@@ -17,6 +16,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true })); 
 app.use('/', indexRouter)
 app.use('/questions', questionsRouter)
+app.use('/quizz', quizzRouter)
 
 
 mongoose.connect(process.env.DATABASE_URL, {

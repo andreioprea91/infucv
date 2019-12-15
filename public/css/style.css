@@ -1,0 +1,19 @@
+@import 'nav.css';
+@import 'questions.css';
+@import 'quizz.css';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    background-color: #D3D3D3;
+    
+}
+
+.core{
+    padding-left:20px;
+    margin-top: 20px;
+}

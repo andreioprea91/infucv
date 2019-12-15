@@ -1,53 +1,35 @@
+
 <h2>New Question</h2>
 <form action="/questions" method="POST">
 
    
     
-    <label>Question</label>
-    <input type="text" name="question" value={{question.question}}>
+    <label id="demo">Question</label>
+    <input type="text" name="question">
     <br>
     <br>
-    <label>A</label>
-    <input type="text" name="A" value={{question.answers.A}}>
+    <label>Answer 1</label>
+    <input type="text" name="a" >
+    <br>
+    
+    <br>
+    <label>Answer 2</label>
+    <input type="text" name="b" >
     <br>
     <br>
-    <label>B</label>
-    <input type="text" name="B" value={{question.answers.B}}>
+    <label>Answer 3</label>
+    <input type="text" name="c" >
+    <br>
+    
+    <br>
+    <label>Answer 4</label>
+    <input type="text" name="d" >
     <br>
     <br>
-    <label>C</label>
-    <input type="text" name="C" value={{question.answers.C}}>
-    <br>
-    <br>
-    <label>D</label>
-    <input type="text" name="D" value={{question.answers.D}}>
-    <br>
-    <br>
-    <label>E</label>
-    <input type="text" name="E" value={{question.answers.E}}>
-    <br>
-    <br>
-    <label>F</label>
-    <input type="text" name="F" value={{question.answers.F}}>
-    <br>
-    <br>
-    <label>G</label>
-    <input type="text" name="G" value={{question.answers.G}}>
-    <br>
-    <br>
-    <label>H</label>
-    <input type="text" name="H" value={{question.answers.H}}>
-    <br>
-    <br>
-    <label>I</label>
-    <input type="text" name="I" value={{question.answers.I}}>
-    <br>
-    <br>
-    <label>correctAnswer</label>
-    <input type="text" name="correctAnswer" value={{question.correctAnswer}}>
-    <br>
-    <br>
+    
     <a href="/questions">Cancel</a>
     <button type="submit">Create</button>
 
 </form>
+
+
