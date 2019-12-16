@@ -69,7 +69,7 @@ function showQuestion(question) {
     }
   });
 }
-
+//
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
   result.innerText = "";
