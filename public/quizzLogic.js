@@ -50,28 +50,28 @@ function showQuestion(question) {
     if (btnOne.innerText === question.correct_answer) {
       result.innerText = "correct";
     } else {
-      result.innerText = "False";
+      result.innerText = "Wrong";
     }
   });
   btnTwo.addEventListener("click", () => {
     if (btnTwo.innerText === question.correct_answer) {
       result.innerText = "correct";
     } else {
-      result.innerText = "False";
+      result.innerText = "Wrong";
     }
   });
   btnThree.addEventListener("click", () => {
     if (btnThree.innerText === question.correct_answer) {
       result.innerText = "correct";
     } else {
-      result.innerText = "False";
+      result.innerText = "Wrong";
     }
   });
   btnFour.addEventListener("click", () => {
     if (btnFour.innerText === question.correct_answer) {
       result.innerText = "correct";
     } else {
-      result.innerText = "False";
+      result.innerText = "Wrong";
     }
   });
 }

@@ -41,6 +41,16 @@
   .results{
 
     font-size: 1.5rem;
+  
+  }
+
+  #correct{
+
     color: green;
+  }
+
+  #incorrect{
+
+    color: red;
   }
   
