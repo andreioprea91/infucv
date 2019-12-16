@@ -1,6 +1,7 @@
 .questions {
   border: 1px solid #dcdcdc;
-  max-width: 700px;
+  width: 800px;
+  max-width: 90%;
   margin: auto;
   border-radius: 5px;
   padding: 10px;
