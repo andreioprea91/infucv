@@ -1,10 +1,10 @@
 const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
-
-const buttOne = document.getElementById("b1");
-const buttwo = document.getElementById("b2");
-const butthree = document.getElementById("b3");
-const buttfour = document.getElementById("b4");
+const questionContainerElement = document.getElementById('question-container')
+const btnOne = document.getElementById("b1");
+const btnTwo = document.getElementById("b2");
+const btnThree = document.getElementById("b3");
+const btnFour = document.getElementById("b4");
 const questionElement = document.getElementById("question");
 
 const result = document.getElementById("correct");
@@ -23,56 +23,72 @@ fetch("/quizz/data")
 
 startGame = () => {
   currentQuestionIndex = 0;
-  startButton.innerText = "Restart";
+  startButton.classList.add('hide')
+  questionContainerElement.classList.remove('hide')
+  nextButton.classList.remove('hide')
+
+  
 
   setNextQuestion();
+
+  
+  
 };
 
 function setNextQuestion() {
   showQuestion(questions[currentQuestionIndex]);
+  
 }
 
 function showQuestion(question) {
   questionElement.innerText = question.question;
   const shuffledAnswers = question.answers.sort(() => Math.random() - 0.5);
-  buttOne.innerText = shuffledAnswers[0];
-  buttwo.innerText = shuffledAnswers[1];
-  butthree.innerText = shuffledAnswers[2];
-  buttfour.innerText = shuffledAnswers[3];
+  btnOne.innerText = shuffledAnswers[0];
+  btnTwo.innerText = shuffledAnswers[1];
+  btnThree.innerText = shuffledAnswers[2];
+  btnFour.innerText = shuffledAnswers[3];
 
-  buttOne.addEventListener("click", () => {
-    if (buttOne.innerText === question.correct_answer) {
+  if (questions.length === currentQuestionIndex +1) {
+    startButton.classList.remove('hide')
+    startButton.innerText = 'Restart'
+    nextButton.classList.add('hide')
+  }
+ 
+
+  btnOne.addEventListener("click", () => {
+    if (btnOne.innerText === question.correct_answer) {
       result.innerText = "correct";
     } else {
       result.innerText = "False";
     }
   });
-  buttwo.addEventListener("click", () => {
-    if (buttwo.innerText === question.correct_answer) {
+  btnTwo.addEventListener("click", () => {
+    if (btnTwo.innerText === question.correct_answer) {
       result.innerText = "correct";
     } else {
       result.innerText = "False";
     }
   });
-  butthree.addEventListener("click", () => {
-    if (butthree.innerText === question.correct_answer) {
+  btnThree.addEventListener("click", () => {
+    if (btnThree.innerText === question.correct_answer) {
       result.innerText = "correct";
     } else {
       result.innerText = "False";
     }
   });
-  buttfour.addEventListener("click", () => {
-    if (buttfour.innerText === question.correct_answer) {
+  btnFour.addEventListener("click", () => {
+    if (btnFour.innerText === question.correct_answer) {
       result.innerText = "correct";
     } else {
       result.innerText = "False";
     }
   });
+
 }
-//
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
   result.innerText = "";
   currentQuestionIndex++;
   setNextQuestion();
+   
 });

@@ -1,35 +1,46 @@
-
 <h2>New Question</h2>
 <form action="/questions" method="POST">
 
-   
-    
+
     <label id="demo">Question</label>
     <input type="text" name="question">
     <br>
     <br>
     <label>Answer 1</label>
-    <input type="text" name="a" >
+    <input type="text" name="a">
     <br>
-    
+
     <br>
     <label>Answer 2</label>
-    <input type="text" name="b" >
+    <input type="text" name="b">
     <br>
     <br>
     <label>Answer 3</label>
-    <input type="text" name="c" >
+    <input type="text" name="c">
     <br>
-    
+
     <br>
     <label>Answer 4</label>
-    <input type="text" name="d" >
+    <input type="text" name="d">
     <br>
     <br>
-    
-    <a href="/questions">Cancel</a>
-    <button type="submit">Create</button>
+
+
+
+    <a href="/" class="button" >Cancel </a>
+    <button type="submit" class="button" >Create</button>
 
 </form>
 
+<style>
 
+
+    .button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+</style>
