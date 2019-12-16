@@ -6,7 +6,6 @@ const btnTwo = document.getElementById("b2");
 const btnThree = document.getElementById("b3");
 const btnFour = document.getElementById("b4");
 const questionElement = document.getElementById("question");
-
 const result = document.getElementById("correct");
 let questions, currentQuestionIndex;
 
@@ -26,18 +25,11 @@ startGame = () => {
   startButton.classList.add('hide')
   questionContainerElement.classList.remove('hide')
   nextButton.classList.remove('hide')
-
-  
-
   setNextQuestion();
-
-  
-  
 };
 
 function setNextQuestion() {
-  showQuestion(questions[currentQuestionIndex]);
-  
+  showQuestion(questions[currentQuestionIndex]); 
 }
 
 function showQuestion(question) {
@@ -54,7 +46,6 @@ function showQuestion(question) {
     nextButton.classList.add('hide')
   }
  
-
   btnOne.addEventListener("click", () => {
     if (btnOne.innerText === question.correct_answer) {
       result.innerText = "correct";
@@ -83,8 +74,8 @@ function showQuestion(question) {
       result.innerText = "False";
     }
   });
-
 }
+
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
   result.innerText = "";
