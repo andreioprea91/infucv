@@ -1,6 +1,7 @@
 @import 'nav.css';
 @import 'questions.css';
 @import 'quizz.css';
+@import 'newquestion.css';
 
 * {
     box-sizing: border-box;
